@@ -11,9 +11,11 @@ app.use(express.json());
 
 app.use("/signup", signupRouter);
 app.use('/login', loginRouter);
+app.use("/dashboard", dashboardRouter);
 
-
-
+app.get("/", async(req,res)=>{
+    res.send("Welcome to Bug Tracker Home Page.")
+})
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, async () => {
