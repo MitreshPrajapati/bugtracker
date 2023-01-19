@@ -7,5 +7,5 @@ require('dotenv').config();
 const bugRouter = Router();
 
 bugRouter.post("/add",authentication,  async(req,res)=>{
-  
+  res.send({"message":"bug added logic"})
 })
