@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const authentication = (req, res, next)=>{
     
-    const token = JSON.parse(localStorage.get("token"))
+    const token = JSON.parse(localStorage.getItem("token"))
 
     if(token){
       const decodedToken = jwt.verify(token, preocess.env.SECRETKEY)
